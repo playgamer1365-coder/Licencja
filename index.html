@@ -189,18 +189,20 @@
     </div>
 </div>
 
-<!-- Odtwarzacz audio -->
-<audio id="bgm" loop>
+<!-- Odtwarzacz audio (zmienione na preload="none") -->
+<audio id="bgm" loop preload="none">
     <source src="strangers_sun.mp3" type="audio/mpeg">
 </audio>
 
 <script>
     function openDocument() {
-        // Odpalanie muzyki
+        // Odpalanie muzyki (dodane sprawdzenie czy już gra)
         var audio = document.getElementById("bgm");
-        audio.play().catch(function(error) {
-            console.log("Autoplay blocked or audio file missing:", error);
-        });
+        if (audio.paused) {
+            audio.play().catch(function(error) {
+                console.log("Autoplay blocked or audio file missing:", error);
+            });
+        }
 
         // Ukrycie przycisku i pokazanie dokumentu
         document.getElementById("unlock-screen").style.display = "none";
