@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficjalny Dokument Urzędowy</title>
+    
+    <!-- Meta tagi podglądu dla RCS (znikają jakiekolwiek spojlery muzyczne) -->
+    <meta property="og:title" content="📜 Oficjalny Dokument Urzędowy">
+    <meta property="og:description" content="Główny Urząd ds. Relacji Siostrzanych – Dostępna nowa wiadomość.">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .stamp {
+            display: inline-block;
+            border: 2px dashed #ffb74d;
+            color: #ffb74d;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .btn-unlock {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: #fff;
+            border: none;
+            padding: 16px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-unlock:active {
+            transform: scale(0.98);
+        }
+        #document-content {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+        h1 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 8px;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .info-box {
+            background: #2a2a2a;
+            border-left: 4px solid #ff9800;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .lead-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .section-title {
+            font-size: 1rem;
+            color: #ffb74d;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        p, li {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        .emoticon-badge {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+            font-family: monospace;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="stamp">Główny Urząd ds. Relacji Siostrzanych</div>
+    
+    <!-- Przyciski i widok początkowy -->
+    <div id="unlock-screen">
+        <h1 style="margin-bottom: 15px;">Dostarczono 1 Nowy Dokument</h1>
+        <p style="margin-bottom: 25px; color: #888; font-size: 0.85rem;">Wymagana weryfikacja odbiorcy w celu odblokowania treści.</p>
+        <button class="btn-unlock" onclick="openDocument()">🖋️ ODKODUJ I ODBIERZ DOKUMENT</button>
+    </div>
+
+    <!-- Ukryty dokument -->
+    <div id="document-content">
+        <h1>📜 OFICJALNA LICENCJA NA SPAM KULTUROZNAWCZY 📜</h1>
+        <div class="subtitle">Wydanie Siostrzane: „Nie martw się, żyję – po prostu ten utwór/lore jest zbyt genialny”</div>
+
+        <div class="info-box">
+            <strong>Wydana dla:</strong> Młodszej Siostry (Która po prostu musi z kimś to podzielić)<br>
+            <strong>Odbiorca:</strong> Emilka (Oficjalna, Niezależna Recenzentka i Główny Słuchacz Wykładów)
+        </div>
+
+        <p class="lead-text">
+            Niniejszy dokument poświadcza prawo Nadawcy do bezkarnego zrzucania na Odbiorcę analiz lingwistycznych (funkcje <i>furigany</i> i <i>ateji</i>), referatów z lore’u gier rytmicznych (tragedia Valkyrie i Scaramouche’a) oraz linków do piosenek.
+        </p>
+
+        <p style="margin-bottom: 10px; font-weight: bold; color: #fff;">W trosce o zdrowie psychiczne obu stron, strony ustalają następujące zasady:</p>
+
+        <div class="section-title">§1. Klauzula Świętego Spokoju (Prawa Emilki)</div>
+        <ul>
+            <li>Odbiorca <strong>NIE MA OBOWIĄZKU</strong> czytania esejów, oglądania filmików ani analizowania wykresów.</li>
+            <li>Odbiorca ma pełne prawo odpisywać wyłącznie emotkami, takimi jak: 👍, „fajne”, „ok” lub kultowe <span class="emoticon-badge">😐😑😐</span>.</li>
+            <li>Odbiorca może bez karnych konsekwencji ignorować wiadomości w godzinach pracy.</li>
+        </ul>
+
+        <div class="section-title">§2. Oświadczenie Nadawcy</div>
+        <ul>
+            <li>Nadawca oświadcza, że <strong>U NIEJ WSZYSTKO JEST W PORZĄDKU</strong>. Spam nie jest wołaniem o pomoc, lecz wyrazem czystego zachwytu i próbą wentylacji emocjonalnej.</li>
+            <li>Nadawca oficjalnie zrzeka się wszelkiego poczucia winy za długość wysyłanych wiadomości.</li>
+        </ul>
+
+        <div class="section-title">§3. Hasło Bezpieczeństwa</div>
+        <p>Jeśli ilość informacji o dramatycznych losach fikcyjnych postaci przekroczy dopuszczalne normy, Odbiorca ma prawo wysłać krótkie: <i>"Nie mam teraz głowy"</i>, <i>"Młyn w pracy"</i> albo po prostu <i>"Stop"</i>.</p>
+
+        <div class="footer">
+            <strong>Podpisano:</strong> Urząd ds. Relacji Siostrzanych i Edukacji Genshinowo-Enstarowej<br><br>
+            <i>(Podpisanie umowy następuje automatycznie poprzez odpisanie jakiejkolwiek emotki na tę wiadomość)</i>
+        </div>
+    </div>
+</div>
+
+<!-- Odtwarzacz audio -->
+<audio id="bgm" loop>
+    <source src="strangers_sun.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    function openDocument() {
+        // Odpalanie muzyki
+        var audio = document.getElementById("bgm");
+        audio.play().catch(function(error) {
+            console.log("Autoplay blocked or audio file missing:", error);
+        });
+
+        // Ukrycie przycisku i pokazanie dokumentu
+        document.getElementById("unlock-screen").style.display = "none";
+        document.getElementById("document-content").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
